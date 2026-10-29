@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huerta Viva · Productos de la huerta</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <h1>Huerta Viva</h1>
+    <p>Productos ecológicos de la huerta, directos a tu casa.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Nuestros productos</h2>
+      <div id="aviso" class="aviso" hidden></div>
+      <div id="productos" class="productos">
+        <p class="cargando">Cargando productos…</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Haz tu pedido</h2>
+      <form id="formulario-pedido" class="formulario">
+        <label>
+          Producto
+          <select name="producto_id" id="producto" required></select>
+        </label>
+        <label>
+          Cantidad
+          <input type="number" name="cantidad" min="1" max="50" value="1" required>
+        </label>
+        <label>
+          Nombre
+          <input type="text" name="nombre" maxlength="100" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" maxlength="150" required>
+        </label>
+        <label>
+          Comentario (opcional)
+          <textarea name="comentario" maxlength="500" rows="3"></textarea>
+        </label>
+        <button type="submit">Enviar pedido</button>
+        <p id="resultado-pedido" class="aviso" hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Huerta Viva · Empresa ficticia para prácticas</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
